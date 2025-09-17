@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BookOpenIcon, AcademicCapIcon, MapPinIcon } from '@heroicons/react/24/outline';
@@ -27,7 +26,6 @@ export default function Home() {
   };
 
   return (
-    <Layout>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-8">
           {/* Welcome Section */}
@@ -78,62 +76,61 @@ export default function Home() {
             </motion.div>
           )}
 
-          {/* Quick Actions */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/assess">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpenIcon className="h-8 w-8 text-blue-500" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Discover Interests</h3>
-                <p className="text-gray-600 text-sm">Take fun quizzes to discover what you love</p>
-              </motion.div>
-            </Link>
+        {/* Quick Actions */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Link href="/assess">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow h-full"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpenIcon className="h-8 w-8 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Discover Interests</h3>
+              <p className="text-gray-600 text-sm">Take fun quizzes to discover what you love</p>
+            </motion.div>
+          </Link>
 
-            <Link href="/streams">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AcademicCapIcon className="h-8 w-8 text-green-500" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Explore Streams</h3>
-                <p className="text-gray-600 text-sm">Find your perfect academic stream</p>
-              </motion.div>
-            </Link>
+          <Link href="/streams">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow h-full"
+            >
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <AcademicCapIcon className="h-8 w-8 text-green-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Explore Streams</h3>
+              <p className="text-gray-600 text-sm">Find your perfect academic stream</p>
+            </motion.div>
+          </Link>
 
-            <Link href="/careers">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPinIcon className="h-8 w-8 text-purple-500" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Career Library</h3>
-                <p className="text-gray-600 text-sm">Explore hundreds of career options</p>
-              </motion.div>
-            </Link>
+          <Link href="/careers">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow h-full"
+            >
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPinIcon className="h-8 w-8 text-purple-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Career Library</h3>
+              <p className="text-gray-600 text-sm">Explore hundreds of career options</p>
+            </motion.div>
+          </Link>
 
-            <Link href="/colleges">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AcademicCapIcon className="h-8 w-8 text-orange-500" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Find Colleges</h3>
-                <p className="text-gray-600 text-sm">Discover nearby government colleges</p>
-              </motion.div>
-            </Link>
-          </div>
+          <Link href="/colleges">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg shadow-md p-6 text-center cursor-pointer hover:shadow-lg transition-shadow h-full"
+            >
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <AcademicCapIcon className="h-8 w-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Find Colleges</h3>
+              <p className="text-gray-600 text-sm">Discover nearby government colleges</p>
+            </motion.div>
+          </Link>
+        </div>
         </div>
       </div>
-    </Layout>
   );
 }
