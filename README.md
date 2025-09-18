@@ -39,7 +39,7 @@ Prerequisites
 - MongoDB and PostgreSQL (local or managed)
 
 Clone and savepoint
-- git clone <repo-url>
+- git clone https://github.com/VijaySakethPuli/edupath.git
 - cd edupathai-platform
 - git checkout -b feature/dev
 - Make a savepoint later with: git tag -a v0.1-savepoint -m "Stable checkpoint"; git push origin v0.1-savepoint
